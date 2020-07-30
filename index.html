@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Widget</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0:
+			box-sizing:border-box;
+			font-family: monospace;
+		}
+		body{
+			width: 100%;
+			position: relative;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150px;
+			z-index: 2;
+		}
+		main{
+			max-width: 1280px;
+			width: 100%;
+			height: 60px;
+			background: linear-gradient(180deg,#31c600,#174d06);
+			color: #fff;
+			overflow: hidden;
+			z-index: 1;
+			position: absolute;
+			top: 40px;
+			left: 0;
+		}
+		h1{
+			font-size: 30px;
+			line-height: 60px;
+			letter-spacing: 1px;
+			word-spacing: 2px;
+		}
+		#movimiento{
+			top: 0;
+			position: absolute;
+			left: 0;
+			width: 1500px;
+			animation: mover_texto 50s infinite;
+			animation-timing-function: linear;
+		}
+		@keyframes mover_texto{
+			0%{
+				transform: translateX(1080px);
+				opacity: 0;
+			}
+			2%{
+				opacity: 1;
+			}
+			28%{
+				opacity: 1;
+			}
+			30%{
+				opacity: 0;
+				transform: translateX(-400px);
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+		#estatico{
+			top: 0;
+			position: absolute;
+			left: 160px;
+			width: 1500px;
+			animation: aparecer_texto 50s infinite;
+		}
+		@keyframes aparecer_texto{
+			0%{
+				opacity: 0;
+			}
+			30%{
+				opacity: 0;
+			}
+			32%{
+				opacity: 1;
+			}
+			98%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<img src="img/logo.png">
+	<main>
+		<h1 id="movimiento">No olvides dejar tu like y suscribirte al canal :)</h1>
+		<h1 id="estatico">Metalhero Gameplays</h1>
+	</main>
+</body>
+</html>
